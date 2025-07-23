@@ -24,6 +24,10 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     }
 )
 
+# Define states
+ON = 1
+OFF = 0
+
 
 def get_plugs(client: client.EzvizClient):
     """Retrieve device informations. This performs I/O, should be async."""
@@ -163,17 +167,17 @@ class EZPlug(SwitchEntity):
 
         True if the plug is on, False if the plug is off.
         """
-        return self._state == 1
+        return self._state == ON
 
     def turn_on(self, **kwargs):
         """Instruct the switch to turn on."""
         if not self.is_on:
-            set_plug_state(self._client, self._serial, 1)
+            set_plug_state(self._client, self._serial, ON)
 
     def turn_off(self, **kwargs):
         """Instruct the switch to turn off."""
         if self.is_on:
-            set_plug_state(self._client, self._serial, 0)
+            set_plug_state(self._client, self._serial, OFF)
 
     def update(self):
         """Update data for this plug based on serial."""
