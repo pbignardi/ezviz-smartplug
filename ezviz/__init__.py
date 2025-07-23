@@ -1,0 +1,1 @@
+"""EZVIZ Smart plug integration"""
