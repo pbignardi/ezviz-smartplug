@@ -148,6 +148,11 @@ class EZPlug(SwitchEntity):
         return self._client
 
     @property
+    def unique_id(self):
+        """Unique identifier for device"""
+        return self.serial
+
+    @property
     def name(self):
         """Return the display name of this plug."""
         return self._name
