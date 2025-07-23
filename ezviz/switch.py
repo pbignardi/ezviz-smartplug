@@ -171,16 +171,22 @@ class EZPlug(SwitchEntity):
 
     def turn_on(self, **kwargs):
         """Instruct the switch to turn on."""
+        _LOGGER.info(f"{self.name}: turn on")
+
         if not self.is_on:
             set_plug_state(self._client, self._serial, ON)
 
     def turn_off(self, **kwargs):
         """Instruct the switch to turn off."""
+        _LOGGER.info(f"{self.name}: turn off")
+
         if self.is_on:
             set_plug_state(self._client, self._serial, OFF)
 
     def update(self):
         """Update data for this plug based on serial."""
+        _LOGGER.info(f"Updating the data for plug: {self.name}")
+
         name, _, state, _ = get_plug_data(self.client, self.serial)
         self._name = name
         self._state = state
