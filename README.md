@@ -1,5 +1,5 @@
-# Ezviz Smart plug platform
-Platform for integrating Ezviz smart plug into Home Assistant.
-See reference [here](https://developers.home-assistant.io/docs/core/entity/switch/).
+# Ezviz Smart Plug platform
+Platform for integrating Ezviz smart plug into Home Assistant,
+as described in the [documentation](https://developers.home-assistant.io/docs/core/entity/switch/).
 
-Still a *work in progress*.
+Very much a *work in progress*.
