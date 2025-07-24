@@ -1,7 +1,7 @@
 {
-  "domain": "ezviz",
+  "domain": "ezviz-smartplug",
   "name": "Ezviz Smart Plug",
-  "codeowners": [],
+  "codeowners": ["pbignardi"],
   "dependencies": [],
   "documentation": "https://github.com/pbignardi/ezviz-smartplug/",
   "iot_class": "cloud_polling",
